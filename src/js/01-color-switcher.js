@@ -4,6 +4,8 @@ const refs = {
 };
 const body = document.querySelector('body');
 
+let id = null;
+
 refs.colorStart.addEventListener('click', handleClickStartBtn);
 refs.colorStop.addEventListener('click', handleClickStopBtn);
 
@@ -11,6 +13,8 @@ refs.colorStop.setAttribute('disabled', true)
 
 function handleClickStartBtn() {
     refs.colorStart.setAttribute('disabled', true);
+        refs.colorStop.setAttribute('disabled', false);
+
     id = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
     }, 1000);

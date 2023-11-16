@@ -3,14 +3,14 @@ import Notiflix from 'notiflix';
 const delayInput = document.querySelector('[name="delay"]');
 const stepInput = document.querySelector('[name="step"]');
 const amountInput = document.querySelector('[name="amount"]');
-const PromiseForm = document.querySelector('.form');
-const PromiseBtn = document.querySelector('button');
+const promiseForm = document.querySelector('.form');
+const promiseBtn = document.querySelector('button');
 
-PromiseForm.addEventListener('submit', onSubmit);
+promiseForm.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
 	e.preventDefault();
-	PromiseBtn.setAttribute('disabled', true);
+	promiseBtn.setAttribute('disabled', true);
 
 	let delay = Number(delayInput.value);
 	let step = Number(stepInput.value);
@@ -31,9 +31,9 @@ function onSubmit(e) {
 
 		delay += step;
 	}
-	PromiseForm.reset();
+	promiseForm.reset();
 	setTimeout(() => {
-		PromiseBtn.removeAttribute('disabled');
+		promiseBtn.removeAttribute('disabled');
 	}, 1000);
 }
 
