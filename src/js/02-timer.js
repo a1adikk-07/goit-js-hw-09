@@ -39,6 +39,8 @@ function checkedCorrectDate(date ) {
 	startBtn.removeAttribute('disabled');
 }
 
+
+
 function deadlineTime(date) {
 	const currentDate = new Date().getTime();
 	const countDownTime = date - currentDate;

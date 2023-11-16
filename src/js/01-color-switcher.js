@@ -19,7 +19,7 @@ function handleClickStartBtn() {
 
 function handleClickStopBtn() {
    clearInterval(id);
-   refs.colorStop.setAttribute('disabled', true)
+    refs.colorStop.setAttribute('disabled', true)
    refs.colorStart.removeAttribute('disabled');
 }
 
@@ -28,3 +28,4 @@ function getRandomHexColor() {
       .toString(16)
       .padStart(6, '0')}`;
 }
+
